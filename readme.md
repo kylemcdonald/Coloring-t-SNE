@@ -188,9 +188,6 @@ ica_projection /= np.max(ica_projection, axis=0)
 plot_tsne(data2, ica_projection)
 ```
 
-    /usr/local/lib/python2.7/site-packages/scipy/linalg/basic.py:884: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
-      warnings.warn(mesg, RuntimeWarning)
-
 
     CPU times: user 31.3 s, sys: 932 ms, total: 32.3 s
     Wall time: 15.2 s
@@ -213,10 +210,6 @@ def pack_binary_ica(data, bits_per_channel=8):
 %time colors = pack_binary_ica(data128, 8)
 plot_tsne(data2, colors)
 ```
-
-    /usr/local/lib/python2.7/site-packages/sklearn/decomposition/fastica_.py:116: UserWarning: FastICA did not converge. Consider increasing tolerance or the maximum number of iterations.
-      warnings.warn('FastICA did not converge. Consider increasing '
-
 
     CPU times: user 2min 15s, sys: 7.01 s, total: 2min 22s
     Wall time: 1min 43s
